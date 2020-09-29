@@ -58,12 +58,18 @@
 
               <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
                 <ul class="site-menu main-menu js-clone-nav ml-auto ">
+                  <% if user_signed_in? %>
                   <li class="active"><%= link_to "Home", root_url, class:"nav-link", :"data-no-turbolink" => true, method: "get" %></li>
                   <li><%= link_to "About", about_index_path, class:"nav-link", :"data-no-turbolink" => true, method: "get" %></li>
                   <li><%= link_to "Patience", patiences_path, class:"nav-link", :"data-no-turbolink" => true, method: "get" %></li>
                   <li><%= link_to "Appointments", appointments_path, class:"nav-link", :"data-no-turbolink" => true, method: "get" %></li>
                   <li><%= link_to "New Patience", new_patience_path, class:"nav-link", :"data-no-turbolink" => true, method: "get" %></li>
                   <li><%= link_to "New Appointment", new_appointment_path, class:"nav-link", :"data-no-turbolink" => true, method: "get" %></li>
+                  <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class:"nav-link", :"data-no-turbolink" => true, method: "get" %></li>
+                  <% else %>
+                  <li><%= link_to "Create An Account", new_user_registration_path, class:"nav-link", :"data-no-turbolink" => true, method: "get" %></li>
+                  <li><%= link_to "Login", new_user_session_path, style:"color:steelblue", class:"nav-link", :"data-no-turbolink" => true, method: "get" %></li>
+                  <% end %>
                 </ul>
               </nav>
             </div>
@@ -81,7 +87,9 @@
             <div class="col-md-7">
               <h1 class="mb-3">I&M Acupuncture and Digital Body Message Center</h1>
               <p>I&M Acupuncture and Digital Body Message Center</p>
-              <p><a href="#" class="btn btn-primary">Learn More</a></p>
+              <p>
+              <%= link_to "Learn More", root_url, class:"btn btn-primary", :"data-no-turbolink" => true, method: "get" %>
+              </p>
             </div>
           </div>
         </div>
@@ -100,10 +108,10 @@
 
             <div class="social_29128">
               
-              <a href="#"><span class="icon-twitter"><i class="fab fa-twitter"></i></span></a>
-              <a href="#"><span class="icon-instagram"><i class="fab fa-instagram"></i></span></a>
-              <a href="#"><span class="icon-facebook"><i class="fab fa-facebook"></i></span></a>
-              <a href="#"><span class="icon-linkedin"><i class="fab fa-linkedin"></i></span></a>
+              <a href="https://www.twitter.com"><span class="icon-twitter"><i class="fab fa-twitter"></i></span></a>
+              <a href="https://www.instragram.com"><span class="icon-instagram"><i class="fab fa-instagram"></i></span></a>
+              <a href="https://www.facebook.com"><span class="icon-facebook"><i class="fab fa-facebook"></i></span></a>
+              <a href="https://www.lindein.com"><span class="icon-linkedin"><i class="fab fa-linkedin"></i></span></a>
               
             </div>
           </div>
@@ -339,21 +347,21 @@
             <h3 class="font-weight-bold serif text-white">I&M Acupuncture and Digital Body Message Center</h3>
           </div>
           <div class="col-12 text-center mb-5">
-            <a href="#" class="">Home</a>
+            <%= link_to "Home", root_url, :"data-no-turbolink" => true, method: "get" %>
             <span class="mx-3"></span>
-            <a href="#" class="">About</a>
+            <%= link_to "About", about_index_path, :"data-no-turbolink" => true, method: "get" %>
             <span class="mx-3"></span>
-            <a href="#" class="">Services</a>
+            <%= link_to "Patience", patiences_path, :"data-no-turbolink" => true, method: "get" %>
             <span class="mx-3"></span>
-            <a href="#" class="">Contact</a>
+            <%= link_to "Appointments", appointments_path, :"data-no-turbolink" => true, method: "get" %>
           </div>
           <div class="col-12">
             <div class="social_29128 white text-center">
               
-              <a href="#"><span class="icon-twitter"><i class="fab fa-twitter"></i></span></a>
-              <a href="#"><span class="icon-instagram"><i class="fab fa-instagram"></i></span></a>
-              <a href="#"><span class="icon-facebook"><i class="fab fa-facebook"></i></span></a>
-              <a href="#"><span class="icon-linkedin"><i class="fab fa-linkedin"></i></span></a>
+              <a href="https://www.facebook.com"><span class="icon-twitter"><i class="fab fa-twitter"></i></span></a>
+              <a href="https://www.instragram.com"><span class="icon-instagram"><i class="fab fa-instagram"></i></span></a>
+              <a href="https://www.twitter.com"><span class="icon-facebook"><i class="fab fa-facebook"></i></span></a>
+              <a href="https://www.twitter.com"><span class="icon-linkedin"><i class="fab fa-linkedin"></i></span></a>
               
             </div>
           </div>

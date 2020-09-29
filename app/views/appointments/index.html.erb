@@ -56,12 +56,18 @@
 
               <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
                 <ul class="site-menu main-menu js-clone-nav ml-auto ">
+                  <% if user_signed_in? %>
                   <li><%= link_to "Home", root_url, class:"nav-link", :"data-no-turbolink" => true, method: "get" %></li>
                   <li><%= link_to "About", about_index_path, class:"nav-link", :"data-no-turbolink" => true, method: "get" %></li>
                   <li><%= link_to "Patience", patiences_path, class:"nav-link", :"data-no-turbolink" => true, method: "get" %></li>
                   <li class="active"><%= link_to "Appointments", appointments_path, class:"nav-link", :"data-no-turbolink" => true, method: "get" %></li>
                   <li><%= link_to "New Patience", new_patience_path, class:"nav-link", :"data-no-turbolink" => true, method: "get" %></li>
                   <li><%= link_to "New Appointment", new_appointment_path, class:"nav-link", :"data-no-turbolink" => true, method: "get" %></li>
+                  <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class:"nav-link", :"data-no-turbolink" => true, method: "get" %></li>
+                  <% else %>
+                  <li><%= link_to "Create An Account", new_user_registration_path, class:"nav-link", :"data-no-turbolink" => true, method: "get" %></li>
+                  <li><%= link_to "Login", new_user_session_path, style:"color:steelblue", class:"nav-link", :"data-no-turbolink" => true, method: "get" %></li>
+                  <% end %>
                 </ul>
               </nav>
             </div>
