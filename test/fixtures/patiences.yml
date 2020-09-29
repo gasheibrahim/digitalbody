@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fullname: MyString
+  sickness: MyString
+  medicines: MyText
+  user: one
+
+two:
+  fullname: MyString
+  sickness: MyString
+  medicines: MyText
+  user: two
