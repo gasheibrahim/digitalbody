@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../assets/aos.css">
 
     <!-- MAIN CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../assets/style.css">
 
   </head>
 
@@ -46,7 +46,9 @@
 
             <div class="col-3 ">
               <div class="site-logo serif">
-                <a href="index.html">I&M Acupuncture and Digital Body Message Center</a>
+                <%= link_to root_url, :"data-no-turbolink" => true, method: "get" do %>
+                  I&M Acupuncture and Digital Body Message Center
+							  <% end %>
               </div>
             </div>
 
@@ -85,7 +87,7 @@
             <div class="col-md-7">
               <h1 class="mb-3">Patience</h1>
               <p>This Page Shows You patience you choose.</p>
-              <p><a href="#" class="btn btn-primary">Learn More</a></p>
+              <p><%= link_to "Learn More", patiences_path, class:"btn btn-primary", :"data-no-turbolink" => true, method: "get" %></p>
             </div>
           </div>
         </div>
@@ -122,21 +124,21 @@
             <h3 class="font-weight-bold serif text-white">I&M Acupuncture and Digital Body Message Center</h3>
           </div>
           <div class="col-12 text-center mb-5">
-            <a href="#" class="">Home</a>
+            <%= link_to "Home", root_url, :"data-no-turbolink" => true, method: "get" %>
             <span class="mx-3"></span>
-            <a href="#" class="">About</a>
+            <%= link_to "About", about_index_path, :"data-no-turbolink" => true, method: "get" %>
             <span class="mx-3"></span>
-            <a href="#" class="">Services</a>
+            <%= link_to "Patience", patiences_path, :"data-no-turbolink" => true, method: "get" %>
             <span class="mx-3"></span>
-            <a href="#" class="">Contact</a>
+            <%= link_to "Appointments", appointments_path, :"data-no-turbolink" => true, method: "get" %>
           </div>
           <div class="col-12">
             <div class="social_29128 white text-center">
               
-              <a href="#"><span class="icon-twitter"><i class="fab fa-twitter"></i></span></a>
-              <a href="#"><span class="icon-instagram"><i class="fab fa-instagram"></i></span></a>
-              <a href="#"><span class="icon-facebook"><i class="fab fa-facebook"></i></span></a>
-              <a href="#"><span class="icon-linkedin"><i class="fab fa-linkedin"></i></span></a>
+              <a href="https://www.facebook.com"><span class="icon-twitter"><i class="fab fa-twitter"></i></span></a>
+              <a href="https://www.instragram.com"><span class="icon-instagram"><i class="fab fa-instagram"></i></span></a>
+              <a href="https://www.twitter.com"><span class="icon-facebook"><i class="fab fa-facebook"></i></span></a>
+              <a href="https://www.twitter.com"><span class="icon-linkedin"><i class="fab fa-linkedin"></i></span></a>
               
             </div>
           </div>
@@ -146,7 +148,7 @@
             <div class="border-top pt-5">
               <p class="small">
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This Website is made <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="/#" target="_blank" >Ibrahim Gashema</a>
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This Website is made <i class="icon-heart text-danger" aria-hidden="true"></i> by <%= link_to "Uwimbabazi Teodette", root_url, target:"_blank", :"data-no-turbolink" => true, method: "get" %>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
             </div>
