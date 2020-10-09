@@ -109,12 +109,13 @@
               <div class="post-entry-1 h-100 person-1">
                 <div class="post-entry-1-contents">
                   <span class="meta">Names: <%= patience.fullname %></span>
+                  <p>Phone Number: <%= patience.phonenumber %><p>
                   <h2>Sickness: <%= patience.sickness %></h2>
                   <p>Medicines: <%= patience.medicines %></p>
                   <p>
                     <%= link_to 'Show', patience, :"data-no-turbolink" => true, method: "get" %>
                     <%= link_to 'Edit', edit_patience_path(patience), :"data-no-turbolink" => true, method: "get" %>
-                    <%= link_to 'Destroy', patience, method: :delete, data: { confirm: 'Are you sure?' }, :"data-no-turbolink" => true, method: "get" %>
+                    <%= link_to 'Destroy', patience, :"data-no-turbolink" => true, method: "get", method: :delete, data: { confirm: 'Are you sure?' } %>
                   </p>
                 </div>
               </div>

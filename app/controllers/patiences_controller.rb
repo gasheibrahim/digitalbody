@@ -69,6 +69,6 @@ class PatiencesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def patience_params
-      params.require(:patience).permit(:fullname, :sickness, :medicines, :user_id)
+      params.require(:patience).permit(:fullname, :sickness, :medicines, :phonenumber, :user_id)
     end
 end

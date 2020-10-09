@@ -113,7 +113,7 @@
                   <p>
                     <%= link_to 'Show', appointment, :"data-no-turbolink" => true, method: "get" %>
                     <%= link_to 'Edit', edit_appointment_path(appointment), :"data-no-turbolink" => true, method: "get" %>
-                    <%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' }, :"data-no-turbolink" => true, method: "get" %>
+                    <%= link_to 'Destroy', appointment, :"data-no-turbolink" => true, method: "get", method: :delete, data: { confirm: 'Are you sure?' } %>
                   </p>
                 </div>
               </div>
